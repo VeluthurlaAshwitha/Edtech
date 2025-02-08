@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<XMLDB PATH="local/cv_generator/db" VERSION="2025012500" COMMENT="CV Generator plugin database schema">
+    <TABLES>
+        <TABLE NAME="cv_generator_data" COMMENT="User CV data">
+            <FIELDS>
+                <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true"/>
+                <FIELD NAME="userid" TYPE="int" LENGTH="10" NOTNULL="true" COMMENT="User ID"/>
+                <FIELD NAME="name" TYPE="char" LENGTH="255" NOTNULL="true" COMMENT="User's name"/>
+                <FIELD NAME="skills" TYPE="text" NOTNULL="false" COMMENT="Skills"/>
+                <FIELD NAME="experience" TYPE="text" NOTNULL="false" COMMENT="Work experience"/>
+                <FIELD NAME="education" TYPE="text" NOTNULL="false" COMMENT="Education details"/>
+                <FIELD NAME="achievements" TYPE="text" NOTNULL="false" COMMENT="Achievements"/>
+                <FIELD NAME="created_at" TYPE="int" LENGTH="10" NOTNULL="true" COMMENT="Timestamp"/>
+            </FIELDS>
+            <KEYS>
+                <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+                <KEY NAME="userid_fk" TYPE="foreign" FIELDS="userid" REFTABLE="user" REFFIELDS="id"/>
+            </KEYS>
+        </TABLE>
+    </TABLES>
+</XMLDB>

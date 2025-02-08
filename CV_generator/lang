@@ -1,0 +1,4 @@
+<?php
+// Plugin strings.
+$string['pluginname'] = 'CV Generator';
+$string['manage'] = 'Manage CV Generator';

@@ -1,0 +1,6 @@
+require_once('tcpdf.php');
+$pdf = new TCPDF();
+$pdf->AddPage();
+$pdf->SetFont('Helvetica', '', 12);
+$pdf->Write(0, $coverletter);
+$pdf->Output('cover_letter.pdf', 'D');
